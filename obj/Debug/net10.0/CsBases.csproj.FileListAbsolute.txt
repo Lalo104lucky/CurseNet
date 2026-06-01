@@ -1,0 +1,14 @@
+E:\Curso .Net\DotNET\CsBases\bin\Debug\net10.0\CsBases.exe
+E:\Curso .Net\DotNET\CsBases\bin\Debug\net10.0\CsBases.deps.json
+E:\Curso .Net\DotNET\CsBases\bin\Debug\net10.0\CsBases.runtimeconfig.json
+E:\Curso .Net\DotNET\CsBases\bin\Debug\net10.0\CsBases.dll
+E:\Curso .Net\DotNET\CsBases\bin\Debug\net10.0\CsBases.pdb
+E:\Curso .Net\DotNET\CsBases\obj\Debug\net10.0\CsBases.GeneratedMSBuildEditorConfig.editorconfig
+E:\Curso .Net\DotNET\CsBases\obj\Debug\net10.0\CsBases.AssemblyInfoInputs.cache
+E:\Curso .Net\DotNET\CsBases\obj\Debug\net10.0\CsBases.AssemblyInfo.cs
+E:\Curso .Net\DotNET\CsBases\obj\Debug\net10.0\CsBases.csproj.CoreCompileInputs.cache
+E:\Curso .Net\DotNET\CsBases\obj\Debug\net10.0\CsBases.dll
+E:\Curso .Net\DotNET\CsBases\obj\Debug\net10.0\refint\CsBases.dll
+E:\Curso .Net\DotNET\CsBases\obj\Debug\net10.0\CsBases.pdb
+E:\Curso .Net\DotNET\CsBases\obj\Debug\net10.0\CsBases.genruntimeconfig.cache
+E:\Curso .Net\DotNET\CsBases\obj\Debug\net10.0\ref\CsBases.dll
