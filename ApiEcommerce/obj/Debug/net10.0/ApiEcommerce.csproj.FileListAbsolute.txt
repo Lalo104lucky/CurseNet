@@ -156,3 +156,5 @@ E:\Curso .Net\ApiEcommerce\ApiEcommerce\obj\Debug\net10.0\refint\ApiEcommerce.dl
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\obj\Debug\net10.0\ApiEcommerce.pdb
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\obj\Debug\net10.0\ApiEcommerce.genruntimeconfig.cache
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\obj\Debug\net10.0\ref\ApiEcommerce.dll
+E:\Curso .Net\ApiEcommerce\ApiEcommerce\obj\Debug\net10.0\ApiEcommerce.sourcelink.json
+E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\AutoMapper.dll
