@@ -158,3 +158,6 @@ E:\Curso .Net\ApiEcommerce\ApiEcommerce\obj\Debug\net10.0\ApiEcommerce.genruntim
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\obj\Debug\net10.0\ref\ApiEcommerce.dll
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\obj\Debug\net10.0\ApiEcommerce.sourcelink.json
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\AutoMapper.dll
+E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
