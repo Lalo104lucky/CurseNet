@@ -161,3 +161,4 @@ E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\AutoMapper.dll
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\BCrypt-Net-Next.dll
