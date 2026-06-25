@@ -6,6 +6,7 @@ using ApiEcommerce.Constants;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,11 +36,33 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuerSigningKey = true,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
         ValidateIssuer = false,
-        ValidateAudience  = true
+        ValidateAudience  = false
     };
 });
 
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(
+    options =>
+  {
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+      Description = "Nuestra API utiliza la Autenticación JWT usando el esquema Bearer. \n\r\n\r" +
+                    "Ingresa la palabra a continuación el token generado en login.\n\r\n\r" +
+                    "Ejemplo: \"12345abcdef\"",
+      Name = "Authorization",
+      In = ParameterLocation.Header,
+      Type = SecuritySchemeType.Http,
+      Scheme = "Bearer"
+    });
+    options.AddSecurityRequirement(document => new OpenApiSecurityRequirement()
+    {
+      {
+        new OpenApiSecuritySchemeReference("Bearer", document, null),
+        new List<string>()
+      }
+    });
+  }
+);
+
 builder.Services.AddControllers();
 
 builder.Services.AddCors(options =>
