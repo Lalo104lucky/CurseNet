@@ -7,12 +7,20 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var dbConnectionString = builder.Configuration.GetConnectionString("ConexionSql");
 builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(dbConnectionString));
+
+builder.Services.AddResponseCaching(options =>
+{
+  options.MaximumBodySize = 1024 * 1024;
+  options.UseCaseSensitivePaths = true;
+});
+
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -63,7 +71,12 @@ builder.Services.AddSwaggerGen(
   }
 );
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(option => 
+{
+  option.CacheProfiles.Add(CacheProfiles.Default10, CacheProfiles.Profile10);
+  option.CacheProfiles.Add(CacheProfiles.Default20, CacheProfiles.Profile20);
+}
+);
 
 builder.Services.AddCors(options =>
 {
@@ -95,6 +108,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors(PolicyNames.AllowSpecificOrigin);
+
+app.UseResponseCaching();
 
 app.UseAuthentication();
 
