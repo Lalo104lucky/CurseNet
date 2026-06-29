@@ -168,3 +168,4 @@ E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Asp.Versioning.Abstrac
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Asp.Versioning.Http.dll
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Asp.Versioning.Mvc.dll
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Asp.Versioning.Mvc.ApiExplorer.dll
+E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
