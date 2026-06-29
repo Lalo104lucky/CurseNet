@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi;
 using Microsoft.AspNetCore.Mvc;
+using Asp.Versioning;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -61,11 +62,49 @@ builder.Services.AddSwaggerGen(
       Type = SecuritySchemeType.Http,
       Scheme = "Bearer"
     });
+
     options.AddSecurityRequirement(document => new OpenApiSecurityRequirement()
     {
       {
         new OpenApiSecuritySchemeReference("Bearer", document, null),
         new List<string>()
+      }
+    });
+
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+      Version = "v1",
+      Title = "API ECOMMERCE V2",
+      Description = "API para gestionar productos y usuarios",
+      TermsOfService = new Uri("https://example.com/terms"),
+      // Todo esto ya es opcional
+      Contact = new OpenApiContact
+      {
+        Name = "Lalo104lucky",
+        Url = new Uri("https://example.com/contact")
+      },
+      License = new OpenApiLicense
+      {
+        Name = "Licencia de uso",
+        Url = new Uri("https://example.com/license")
+      }
+    });
+    options.SwaggerDoc("v2", new OpenApiInfo
+    {
+      Version = "v2",
+      Title = "API ECOMMERCE",
+      Description = "API para gestionar productos y usuarios",
+      TermsOfService = new Uri("https://example.com/terms"),
+      // Todo esto ya es opcional
+      Contact = new OpenApiContact
+      {
+        Name = "Lalo104lucky",
+        Url = new Uri("https://example.com/contact")
+      },
+      License = new OpenApiLicense
+      {
+        Name = "Licencia de uso",
+        Url = new Uri("https://example.com/license")
       }
     });
   }
@@ -77,6 +116,19 @@ builder.Services.AddControllers(option =>
   option.CacheProfiles.Add(CacheProfiles.Default20, CacheProfiles.Profile20);
 }
 );
+
+var apiVersioningBuilder = builder.Services.AddApiVersioning(option =>
+{
+  option.AssumeDefaultVersionWhenUnspecified = true;
+  option.DefaultApiVersion = new ApiVersion(1, 0);
+  option.ReportApiVersions = true;
+  // option.ApiVersionReader = ApiVersionReader.Combine( new QueryStringApiVersionReader("api-version")); // ?api-version
+});
+apiVersioningBuilder.AddApiExplorer(option =>
+{
+  option.GroupNameFormat = "'v'VVV"; // v1, v2, v3...
+  option.SubstituteApiVersionInUrl = true; // api/v{version}/products
+});
 
 builder.Services.AddCors(options =>
 {
@@ -96,7 +148,11 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+      options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+      options.SwaggerEndpoint("/swagger/v2/swagger.json", "v2");
+    });
 }
 
 // Configure the HTTP request pipeline.

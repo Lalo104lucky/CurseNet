@@ -164,3 +164,7 @@ E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Swashbuckle.AspNetCore
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\BCrypt-Net-Next.dll
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\API Ecommerce.postman_collection.json
+E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Asp.Versioning.Abstractions.dll
+E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Asp.Versioning.Http.dll
+E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Asp.Versioning.Mvc.dll
+E:\Curso .Net\ApiEcommerce\ApiEcommerce\bin\Debug\net10.0\Asp.Versioning.Mvc.ApiExplorer.dll
